@@ -35,19 +35,19 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Left for value: Left
         /// </summary>
         
-        Left = Left,
+        Left ,
         
         /// <summary>
         /// Enum Top for value: Top
         /// </summary>
         
-        Top = Top,
+        Top ,
         
         /// <summary>
         /// Enum None for value: None
         /// </summary>
         
-        None = None
+        None 
     }
 
 }

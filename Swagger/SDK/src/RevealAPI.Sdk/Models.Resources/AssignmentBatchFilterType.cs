@@ -35,61 +35,61 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Error for value: Error
         /// </summary>
         
-        Error = Error,
+        Error ,
         
         /// <summary>
         /// Enum Title for value: Title
         /// </summary>
         
-        Title = Title,
+        Title ,
         
         /// <summary>
         /// Enum Date for value: Date
         /// </summary>
         
-        Date = Date,
+        Date ,
         
         /// <summary>
         /// Enum Review for value: Review
         /// </summary>
         
-        Review = Review,
+        Review,
         
         /// <summary>
         /// Enum User for value: User
         /// </summary>
         
-        User = User,
+        User ,
         
         /// <summary>
         /// Enum Status for value: Status
         /// </summary>
         
-        Status = Status,
+        Status ,
         
         /// <summary>
         /// Enum Type for value: Type
         /// </summary>
         
-        Type = Type,
+        Type ,
         
         /// <summary>
         /// Enum Tag for value: Tag
         /// </summary>
         
-        Tag = Tag,
+        Tag ,
         
         /// <summary>
         /// Enum CreatedDate for value: CreatedDate
         /// </summary>
         
-        CreatedDate = CreatedDate,
+        CreatedDate ,
         
         /// <summary>
         /// Enum None for value: None
         /// </summary>
         
-        None = None
+        None 
     }
 
 }

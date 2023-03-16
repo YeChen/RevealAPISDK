@@ -35,19 +35,19 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum None for value: None
         /// </summary>
         
-        None = None,
+        None ,
         
         /// <summary>
         /// Enum BurnedIn for value: BurnedIn
         /// </summary>
         
-        BurnedIn = BurnedIn,
+        BurnedIn ,
         
         /// <summary>
         /// Enum SeeThrough for value: SeeThrough
         /// </summary>
         
-        SeeThrough = SeeThrough
+        SeeThrough 
     }
 
 }

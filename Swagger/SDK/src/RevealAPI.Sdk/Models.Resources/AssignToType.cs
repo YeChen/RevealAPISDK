@@ -35,19 +35,19 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Pool for value: Pool
         /// </summary>
         
-        Pool = Pool,
+        Pool,
         
         /// <summary>
         /// Enum Users for value: Users
         /// </summary>
         
-        Users = Users,
+        Users ,
         
         /// <summary>
         /// Enum Team for value: Team
         /// </summary>
         
-        Team = Team
+        Team 
     }
 
 }

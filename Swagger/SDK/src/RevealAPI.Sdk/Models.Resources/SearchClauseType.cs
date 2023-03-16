@@ -35,115 +35,115 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum None for value: none
         /// </summary>
         
-        None = none,
+        none ,
         
         /// <summary>
         /// Enum Tag for value: tag
         /// </summary>
         
-        Tag = tag,
+        tag ,
         
         /// <summary>
         /// Enum All for value: all
         /// </summary>
         
-        All = all,
+        all ,
         
         /// <summary>
         /// Enum Not for value: not
         /// </summary>
         
-        Not = not,
+        not ,
         
         /// <summary>
         /// Enum Folder for value: folder
         /// </summary>
         
-        Folder = folder,
+        folder ,
         
         /// <summary>
         /// Enum RevealQueryLanguage for value: revealQueryLanguage
         /// </summary>
         
-        RevealQueryLanguage = revealQueryLanguage,
+        revealQueryLanguage ,
         
         /// <summary>
         /// Enum Term for value: term
         /// </summary>
         
-        Term = term,
+        term ,
         
         /// <summary>
         /// Enum Numeric for value: numeric
         /// </summary>
         
-        Numeric = numeric,
+        numeric ,
         
         /// <summary>
         /// Enum DateTime for value: dateTime
         /// </summary>
         
-        DateTime = dateTime,
+        dateTime ,
         
         /// <summary>
         /// Enum Metadata for value: metadata
         /// </summary>
         
-        Metadata = metadata,
+        metadata ,
         
         /// <summary>
         /// Enum Has for value: has
         /// </summary>
         
-        Has = has,
+        has ,
         
         /// <summary>
         /// Enum DupType for value: dupType
         /// </summary>
         
-        DupType = dupType,
+        dupType ,
         
         /// <summary>
         /// Enum Concept for value: concept
         /// </summary>
         
-        Concept = concept,
+        concept ,
         
         /// <summary>
         /// Enum AdvancedBoolean for value: advancedBoolean
         /// </summary>
         
-        AdvancedBoolean = advancedBoolean,
+        advancedBoolean ,
         
         /// <summary>
         /// Enum RqlList for value: rqlList
         /// </summary>
         
-        RqlList = rqlList,
+        rqlList ,
         
         /// <summary>
         /// Enum Expansion for value: expansion
         /// </summary>
         
-        Expansion = expansion,
+        expansion ,
         
         /// <summary>
         /// Enum Time for value: time
         /// </summary>
         
-        Time = time,
+        time ,
         
         /// <summary>
         /// Enum SearchProfile for value: searchProfile
         /// </summary>
         
-        SearchProfile = searchProfile,
+        searchProfile,
         
         /// <summary>
         /// Enum TermIn for value: termIn
         /// </summary>
         
-        TermIn = termIn
+         termIn
     }
 
 }

@@ -35,19 +35,19 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum None for value: None
         /// </summary>
         
-        None = None,
+        None ,
         
         /// <summary>
         /// Enum Add for value: Add
         /// </summary>
         
-        Add = Add,
+        Add,
         
         /// <summary>
         /// Enum Remove for value: Remove
         /// </summary>
         
-        Remove = Remove
+        Remove 
     }
 
 }

@@ -35,25 +35,25 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Assigned for value: Assigned
         /// </summary>
         
-        Assigned = Assigned,
+        Assigned,
         
         /// <summary>
         /// Enum Available for value: Available
         /// </summary>
         
-        Available = Available,
+        Available,
         
         /// <summary>
         /// Enum CheckedOut for value: CheckedOut
         /// </summary>
         
-        CheckedOut = CheckedOut,
+        CheckedOut,
         
         /// <summary>
         /// Enum Complete for value: Complete
         /// </summary>
         
-        Complete = Complete
+        Complete
     }
 
 }

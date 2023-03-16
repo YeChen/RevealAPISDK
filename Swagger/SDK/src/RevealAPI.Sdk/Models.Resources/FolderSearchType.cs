@@ -35,109 +35,109 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Work for value: Work
         /// </summary>
         
-        Work = Work,
+        Work ,
         
         /// <summary>
         /// Enum Document for value: Document
         /// </summary>
         
-        Document = Document,
+        Document ,
         
         /// <summary>
         /// Enum AssignmentFolder for value: AssignmentFolder
         /// </summary>
         
-        AssignmentFolder = AssignmentFolder,
+        AssignmentFolder ,
         
         /// <summary>
         /// Enum Transcript for value: Transcript
         /// </summary>
         
-        Transcript = Transcript,
+        Transcript ,
         
         /// <summary>
         /// Enum Imports for value: Imports
         /// </summary>
         
-        Imports = Imports,
+        Imports ,
         
         /// <summary>
         /// Enum SecuredByTeam for value: SecuredByTeam
         /// </summary>
         
-        SecuredByTeam = SecuredByTeam,
+        SecuredByTeam ,
         
         /// <summary>
         /// Enum SecuredByUser for value: SecuredByUser
         /// </summary>
         
-        SecuredByUser = SecuredByUser,
+        SecuredByUser ,
         
         /// <summary>
         /// Enum Unsecured for value: Unsecured
         /// </summary>
         
-        Unsecured = Unsecured,
+        Unsecured ,
         
         /// <summary>
         /// Enum RedactionByUser for value: RedactionByUser
         /// </summary>
         
-        RedactionByUser = RedactionByUser,
+        RedactionByUser ,
         
         /// <summary>
         /// Enum AssignmentByBatch for value: AssignmentByBatch
         /// </summary>
         
-        AssignmentByBatch = AssignmentByBatch,
+        AssignmentByBatch ,
         
         /// <summary>
         /// Enum AssignmentByCustodian for value: AssignmentByCustodian
         /// </summary>
         
-        AssignmentByCustodian = AssignmentByCustodian,
+        AssignmentByCustodian ,
         
         /// <summary>
         /// Enum AssignmentByJob for value: AssignmentByJob
         /// </summary>
         
-        AssignmentByJob = AssignmentByJob,
+        AssignmentByJob ,
         
         /// <summary>
         /// Enum AssignmentByFolderIsReviewed for value: AssignmentByFolderIsReviewed
         /// </summary>
         
-        AssignmentByFolderIsReviewed = AssignmentByFolderIsReviewed,
+        AssignmentByFolderIsReviewed ,
         
         /// <summary>
         /// Enum AssignmentByFolderIsNotReviewed for value: AssignmentByFolderIsNotReviewed
         /// </summary>
         
-        AssignmentByFolderIsNotReviewed = AssignmentByFolderIsNotReviewed,
+        AssignmentByFolderIsNotReviewed ,
         
         /// <summary>
         /// Enum AssignmentByJobIsReviewed for value: AssignmentByJobIsReviewed
         /// </summary>
         
-        AssignmentByJobIsReviewed = AssignmentByJobIsReviewed,
+        AssignmentByJobIsReviewed ,
         
         /// <summary>
         /// Enum AssignmentByJobIsNotReviewed for value: AssignmentByJobIsNotReviewed
         /// </summary>
         
-        AssignmentByJobIsNotReviewed = AssignmentByJobIsNotReviewed,
+        AssignmentByJobIsNotReviewed,
         
         /// <summary>
         /// Enum TagProfileIsReviewed for value: TagProfileIsReviewed
         /// </summary>
         
-        TagProfileIsReviewed = TagProfileIsReviewed,
+        TagProfileIsReviewed ,
         
         /// <summary>
         /// Enum TagProfileIsNotReviewed for value: TagProfileIsNotReviewed
         /// </summary>
         
-        TagProfileIsNotReviewed = TagProfileIsNotReviewed
+        TagProfileIsNotReviewed 
     }
 
 }

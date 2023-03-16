@@ -28,7 +28,7 @@ namespace RevealAPI.Sdk.Models.Resources
     /// ProblemDetails
     /// </summary>
     [DataContract]
-    public partial class ProblemDetails : Dictionary<String, Object>,  IEquatable<ProblemDetails>, IValidatableObject
+    public partial class ProblemDetails : Dictionary<String, Object>,  IEquatable<ProblemDetails>//, IValidatableObject
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="ProblemDetails" /> class.
@@ -99,7 +99,7 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public override string ToJson()
+        public  string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -180,11 +180,11 @@ namespace RevealAPI.Sdk.Models.Resources
         /// </summary>
         /// <param name="validationContext">Validation context</param>
         /// <returns>Validation Result</returns>
-        IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
-        {
-            foreach(var x in BaseValidate(validationContext)) yield return x;
-            yield break;
-        }
+        //IEnumerable<System.ComponentModel.DataAnnotations.ValidationResult> IValidatableObject.Validate(ValidationContext validationContext)
+        //{
+        //    foreach(var x in BaseValidate(validationContext)) yield return x;
+        //    yield break;
+        //}
     }
 
 }

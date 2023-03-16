@@ -31,3 +31,6 @@ E:\Github\GitHub\RevealAPISDK\TestHarness\TestHarness2\obj\Debug\TestHarness.csp
 E:\Github\GitHub\RevealAPISDK\TestHarness\TestHarness2\obj\Debug\TestHarness.csproj.CopyComplete
 E:\Github\GitHub\RevealAPISDK\TestHarness\TestHarness2\obj\Debug\TestHarness2.exe
 E:\Github\GitHub\RevealAPISDK\TestHarness\TestHarness2\obj\Debug\TestHarness2.pdb
+E:\Github\GitHub\RevealAPISDK\TestHarness\TestHarness2\bin\Debug\RevealAPI.Sdk.dll
+E:\Github\GitHub\RevealAPISDK\TestHarness\TestHarness2\bin\Debug\RevealAPI.Sdk.pdb
+E:\Github\GitHub\RevealAPISDK\TestHarness\TestHarness2\obj\Debug\TestHarness2.exe.config

@@ -35,25 +35,25 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum None for value: None
         /// </summary>
         
-        None = None,
+        None ,
         
         /// <summary>
         /// Enum Pending for value: Pending
         /// </summary>
         
-        Pending = Pending,
+        Pending ,
         
         /// <summary>
         /// Enum InProgress for value: InProgress
         /// </summary>
         
-        InProgress = InProgress,
+        InProgress ,
         
         /// <summary>
         /// Enum Complete for value: Complete
         /// </summary>
         
-        Complete = Complete
+        Complete
     }
 
 }

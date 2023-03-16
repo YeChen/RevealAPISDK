@@ -35,73 +35,73 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Nvarchar for value: Nvarchar
         /// </summary>
         
-        Nvarchar = Nvarchar,
+        Nvarchar ,
         
         /// <summary>
         /// Enum Date for value: Date
         /// </summary>
         
-        Date = Date,
+        Date ,
         
         /// <summary>
         /// Enum Time for value: Time
         /// </summary>
         
-        Time = Time,
+        Time ,
         
         /// <summary>
         /// Enum DateTime for value: DateTime
         /// </summary>
         
-        DateTime = DateTime,
+        DateTime ,
         
         /// <summary>
         /// Enum Numeric for value: Numeric
         /// </summary>
         
-        Numeric = Numeric,
+        Numeric ,
         
         /// <summary>
         /// Enum Float for value: Float
         /// </summary>
         
-        Float = Float,
+        Float ,
         
         /// <summary>
         /// Enum Bit for value: Bit
         /// </summary>
         
-        Bit = Bit,
+        Bit ,
         
         /// <summary>
         /// Enum BigInt for value: BigInt
         /// </summary>
         
-        BigInt = BigInt,
+        BigInt ,
         
         /// <summary>
         /// Enum List for value: List
         /// </summary>
         
-        List = List,
+        List ,
         
         /// <summary>
         /// Enum MultiList for value: Multi_List
         /// </summary>
         
-        MultiList = Multi_List,
+        MultiList ,
         
         /// <summary>
         /// Enum Int for value: Int
         /// </summary>
         
-        Int = Int,
+        Int,
         
         /// <summary>
         /// Enum Decimal for value: Decimal
         /// </summary>
         
-        Decimal = Decimal
+        Decimal 
     }
 
 }

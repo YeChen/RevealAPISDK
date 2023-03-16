@@ -35,19 +35,19 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum NormalOrdering for value: NormalOrdering
         /// </summary>
         
-        NormalOrdering = NormalOrdering,
+        NormalOrdering ,
         
         /// <summary>
         /// Enum FieldNameOrdering for value: FieldNameOrdering
         /// </summary>
         
-        FieldNameOrdering = FieldNameOrdering,
+        FieldNameOrdering ,
         
         /// <summary>
         /// Enum PrefixOrdering for value: PrefixOrdering
         /// </summary>
         
-        PrefixOrdering = PrefixOrdering
+        PrefixOrdering 
     }
 
 }

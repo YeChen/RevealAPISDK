@@ -35,31 +35,31 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Rql for value: Rql
         /// </summary>
         
-        Rql = Rql,
+        Rql ,
         
         /// <summary>
         /// Enum Bql for value: Bql
         /// </summary>
         
-        Bql = Bql,
+        Bql ,
         
         /// <summary>
         /// Enum SearchId for value: SearchId
         /// </summary>
         
-        SearchId = SearchId,
+        SearchId ,
         
         /// <summary>
         /// Enum SearchJobId for value: SearchJobId
         /// </summary>
         
-        SearchJobId = SearchJobId,
+        SearchJobId ,
         
         /// <summary>
         /// Enum SavedSearchId for value: SavedSearchId
         /// </summary>
         
-        SavedSearchId = SavedSearchId
+        SavedSearchId 
     }
 
 }

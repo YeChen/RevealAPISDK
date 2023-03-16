@@ -35,19 +35,19 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Tag for value: Tag
         /// </summary>
         
-        Tag = Tag,
+        Tag ,
         
         /// <summary>
         /// Enum Field for value: Field
         /// </summary>
         
-        Field = Field,
+        Field ,
         
         /// <summary>
         /// Enum TagSet for value: TagSet
         /// </summary>
         
-        TagSet = TagSet
+        TagSet 
     }
 
 }

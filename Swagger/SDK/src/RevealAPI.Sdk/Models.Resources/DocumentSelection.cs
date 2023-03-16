@@ -35,25 +35,25 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum All for value: All
         /// </summary>
         
-        All = All,
+        All ,
         
         /// <summary>
         /// Enum Subset for value: Subset
         /// </summary>
         
-        Subset = Subset,
+        Subset ,
         
         /// <summary>
         /// Enum AllFromSearchContext for value: AllFromSearchContext
         /// </summary>
         
-        AllFromSearchContext = AllFromSearchContext,
+        AllFromSearchContext ,
         
         /// <summary>
         /// Enum Random for value: Random
         /// </summary>
         
-        Random = Random
+        Random
     }
 
 }

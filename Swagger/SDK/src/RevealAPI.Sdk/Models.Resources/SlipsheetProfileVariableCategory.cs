@@ -35,25 +35,25 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum None for value: None
         /// </summary>
         
-        None = None,
+        None ,
         
         /// <summary>
         /// Enum UserText for value: UserText
         /// </summary>
         
-        UserText = UserText,
+        UserText ,
         
         /// <summary>
         /// Enum Tag for value: Tag
         /// </summary>
         
-        Tag = Tag,
+        Tag ,
         
         /// <summary>
         /// Enum Field for value: Field
         /// </summary>
         
-        Field = Field
+        Field 
     }
 
 }

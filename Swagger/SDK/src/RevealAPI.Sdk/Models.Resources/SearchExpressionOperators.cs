@@ -35,109 +35,109 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum EQUALTO for value: EQUAL_TO
         /// </summary>
         
-        EQUALTO = EQUAL_TO,
+        EQUALTO ,
         
         /// <summary>
         /// Enum NOTEQUALTO for value: NOT_EQUAL_TO
         /// </summary>
         
-        NOTEQUALTO = NOT_EQUAL_TO,
+        NOTEQUALTO ,
         
         /// <summary>
         /// Enum GREATERTHAN for value: GREATER_THAN
         /// </summary>
         
-        GREATERTHAN = GREATER_THAN,
+        GREATERTHAN ,
         
         /// <summary>
         /// Enum GREATERTHANOREQUALTO for value: GREATER_THAN_OR_EQUAL_TO
         /// </summary>
         
-        GREATERTHANOREQUALTO = GREATER_THAN_OR_EQUAL_TO,
+        GREATERTHANOREQUALTO ,
         
         /// <summary>
         /// Enum LESSTHAN for value: LESS_THAN
         /// </summary>
         
-        LESSTHAN = LESS_THAN,
+        LESSTHAN ,
         
         /// <summary>
         /// Enum LESSTHANOREQUALTO for value: LESS_THAN_OR_EQUAL_TO
         /// </summary>
         
-        LESSTHANOREQUALTO = LESS_THAN_OR_EQUAL_TO,
+        LESSTHANOREQUALTO ,
         
         /// <summary>
         /// Enum CONTAINS for value: CONTAINS
         /// </summary>
         
-        CONTAINS = CONTAINS,
+        CONTAINS ,
         
         /// <summary>
         /// Enum DOESNOTCONTAIN for value: DOES_NOT_CONTAIN
         /// </summary>
         
-        DOESNOTCONTAIN = DOES_NOT_CONTAIN,
+        DOESNOTCONTAIN ,
         
         /// <summary>
         /// Enum RANGE for value: RANGE
         /// </summary>
         
-        RANGE = RANGE,
+        RANGE ,
         
         /// <summary>
         /// Enum ISEMPTY for value: IS_EMPTY
         /// </summary>
         
-        ISEMPTY = IS_EMPTY,
+        ISEMPTY ,
         
         /// <summary>
         /// Enum ISNOTEMPTY for value: IS_NOT_EMPTY
         /// </summary>
         
-        ISNOTEMPTY = IS_NOT_EMPTY,
+        ISNOTEMPTY ,
         
         /// <summary>
         /// Enum ISLIKE for value: IS_LIKE
         /// </summary>
         
-        ISLIKE = IS_LIKE,
+        ISLIKE ,
         
         /// <summary>
         /// Enum ISNOTLIKE for value: IS_NOT_LIKE
         /// </summary>
         
-        ISNOTLIKE = IS_NOT_LIKE,
+        ISNOTLIKE ,
         
         /// <summary>
         /// Enum HASANY for value: HAS_ANY
         /// </summary>
         
-        HASANY = HAS_ANY,
+        HASANY ,
         
         /// <summary>
         /// Enum HASALL for value: HAS_ALL
         /// </summary>
         
-        HASALL = HAS_ALL,
+        HASALL ,
         
         /// <summary>
         /// Enum HASNONE for value: HAS_NONE
         /// </summary>
         
-        HASNONE = HAS_NONE,
+        HASNONE ,
         
         /// <summary>
         /// Enum NOTALL for value: NOT_ALL
         /// </summary>
         
-        NOTALL = NOT_ALL,
+        NOTALL ,
         
         /// <summary>
         /// Enum UNKNOWN for value: UNKNOWN
         /// </summary>
         
-        UNKNOWN = UNKNOWN
+        UNKNOWN 
     }
 
 }

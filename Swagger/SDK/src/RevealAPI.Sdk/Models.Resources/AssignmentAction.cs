@@ -35,19 +35,19 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Complete for value: Complete
         /// </summary>
         
-        Complete = Complete,
+        Complete ,
         
         /// <summary>
         /// Enum Assign for value: Assign
         /// </summary>
         
-        Assign = Assign,
+        Assign,
         
         /// <summary>
         /// Enum Unassign for value: Unassign
         /// </summary>
         
-        Unassign = Unassign
+        Unassign
     }
 
 }

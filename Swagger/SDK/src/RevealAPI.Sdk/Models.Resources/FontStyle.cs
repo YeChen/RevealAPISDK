@@ -35,31 +35,31 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Regular for value: Regular
         /// </summary>
         
-        Regular = Regular,
+        Regular ,
         
         /// <summary>
         /// Enum Bold for value: Bold
         /// </summary>
         
-        Bold = Bold,
+        Bold ,
         
         /// <summary>
         /// Enum Italic for value: Italic
         /// </summary>
         
-        Italic = Italic,
+        Italic ,
         
         /// <summary>
         /// Enum Underline for value: Underline
         /// </summary>
         
-        Underline = Underline,
+        Underline ,
         
         /// <summary>
         /// Enum Strikeout for value: Strikeout
         /// </summary>
         
-        Strikeout = Strikeout
+        Strikeout 
     }
 
 }

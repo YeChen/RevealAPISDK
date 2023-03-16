@@ -35,19 +35,19 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum COUNT for value: COUNT
         /// </summary>
         
-        COUNT = COUNT,
+        COUNT ,
         
         /// <summary>
         /// Enum PERCENT for value: PERCENT
         /// </summary>
         
-        PERCENT = PERCENT,
+        PERCENT ,
         
         /// <summary>
         /// Enum STATISTIC for value: STATISTIC
         /// </summary>
         
-        STATISTIC = STATISTIC
+        STATISTIC 
     }
 
 }

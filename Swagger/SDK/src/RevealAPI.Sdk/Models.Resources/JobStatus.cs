@@ -35,67 +35,67 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Created for value: Created
         /// </summary>
         
-        Created = Created,
+        Created ,
         
         /// <summary>
         /// Enum Submitted for value: Submitted
         /// </summary>
         
-        Submitted = Submitted,
+        Submitted ,
         
         /// <summary>
         /// Enum InProcess for value: InProcess
         /// </summary>
         
-        InProcess = InProcess,
+        InProcess ,
         
         /// <summary>
         /// Enum Complete for value: Complete
         /// </summary>
         
-        Complete = Complete,
+        Complete ,
         
         /// <summary>
         /// Enum Error for value: Error
         /// </summary>
         
-        Error = Error,
+        Error ,
         
         /// <summary>
         /// Enum Cancelled for value: Cancelled
         /// </summary>
         
-        Cancelled = Cancelled,
+        Cancelled ,
         
         /// <summary>
         /// Enum CancelPending for value: CancelPending
         /// </summary>
         
-        CancelPending = CancelPending,
+        CancelPending ,
         
         /// <summary>
         /// Enum Deleted for value: Deleted
         /// </summary>
         
-        Deleted = Deleted,
+        Deleted ,
         
         /// <summary>
         /// Enum Modified for value: Modified
         /// </summary>
         
-        Modified = Modified,
+        Modified ,
         
         /// <summary>
         /// Enum CompleteWithErrors for value: CompleteWithErrors
         /// </summary>
         
-        CompleteWithErrors = CompleteWithErrors,
+        CompleteWithErrors ,
         
         /// <summary>
         /// Enum Unknown for value: Unknown
         /// </summary>
         
-        Unknown = Unknown
+        Unknown 
     }
 
 }
