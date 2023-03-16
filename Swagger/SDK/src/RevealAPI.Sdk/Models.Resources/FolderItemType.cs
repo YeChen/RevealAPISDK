@@ -35,283 +35,283 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum Work for value: Work
         /// </summary>
         
-        Work = Work,
+        Work ,
         
         /// <summary>
         /// Enum Document for value: Document
         /// </summary>
         
-        Document = Document,
+        Document,
         
         /// <summary>
         /// Enum Assignment for value: Assignment
         /// </summary>
         
-        Assignment = Assignment,
+        Assignment ,
         
         /// <summary>
         /// Enum Transcript for value: Transcript
         /// </summary>
         
-        Transcript = Transcript,
+        Transcript ,
         
         /// <summary>
         /// Enum Imports for value: Imports
         /// </summary>
         
-        Imports = Imports,
+        Imports ,
         
         /// <summary>
         /// Enum SecuredByTeam for value: SecuredByTeam
         /// </summary>
         
-        SecuredByTeam = SecuredByTeam,
+        SecuredByTeam ,
         
         /// <summary>
         /// Enum SecuredByUser for value: SecuredByUser
         /// </summary>
         
-        SecuredByUser = SecuredByUser,
+        SecuredByUser ,
         
         /// <summary>
         /// Enum Unsecured for value: Unsecured
         /// </summary>
         
-        Unsecured = Unsecured,
+        Unsecured ,
         
         /// <summary>
         /// Enum Redaction for value: Redaction
         /// </summary>
         
-        Redaction = Redaction,
+        Redaction ,
         
         /// <summary>
         /// Enum AssignmentByBatch for value: AssignmentByBatch
         /// </summary>
         
-        AssignmentByBatch = AssignmentByBatch,
+        AssignmentByBatch ,
         
         /// <summary>
         /// Enum AssignmentByCustodian for value: AssignmentByCustodian
         /// </summary>
         
-        AssignmentByCustodian = AssignmentByCustodian,
+        AssignmentByCustodian,
         
         /// <summary>
         /// Enum AssignmentByJob for value: AssignmentByJob
         /// </summary>
         
-        AssignmentByJob = AssignmentByJob,
+        AssignmentByJob ,
         
         /// <summary>
         /// Enum AssignmentByFolderIsReviewed for value: AssignmentByFolderIsReviewed
         /// </summary>
         
-        AssignmentByFolderIsReviewed = AssignmentByFolderIsReviewed,
+        AssignmentByFolderIsReviewed ,
         
         /// <summary>
         /// Enum AssignmentByFolderIsNotReviewed for value: AssignmentByFolderIsNotReviewed
         /// </summary>
         
-        AssignmentByFolderIsNotReviewed = AssignmentByFolderIsNotReviewed,
+        AssignmentByFolderIsNotReviewed ,
         
         /// <summary>
         /// Enum AssignmentByJobIsReviewed for value: AssignmentByJobIsReviewed
         /// </summary>
         
-        AssignmentByJobIsReviewed = AssignmentByJobIsReviewed,
+        AssignmentByJobIsReviewed ,
         
         /// <summary>
         /// Enum AssignmentByJobIsNotReviewed for value: AssignmentByJobIsNotReviewed
         /// </summary>
         
-        AssignmentByJobIsNotReviewed = AssignmentByJobIsNotReviewed,
+        AssignmentByJobIsNotReviewed ,
         
         /// <summary>
         /// Enum TagProfileIsReviewed for value: TagProfileIsReviewed
         /// </summary>
         
-        TagProfileIsReviewed = TagProfileIsReviewed,
+        TagProfileIsReviewed,
         
         /// <summary>
         /// Enum TagProfileIsNotReviewed for value: TagProfileIsNotReviewed
         /// </summary>
         
-        TagProfileIsNotReviewed = TagProfileIsNotReviewed,
+        TagProfileIsNotReviewed ,
         
         /// <summary>
         /// Enum SavedSearch for value: SavedSearch
         /// </summary>
         
-        SavedSearch = SavedSearch,
+        SavedSearch ,
         
         /// <summary>
         /// Enum SearchHistory for value: SearchHistory
         /// </summary>
         
-        SearchHistory = SearchHistory,
+        SearchHistory ,
         
         /// <summary>
         /// Enum AdminView for value: AdminView
         /// </summary>
         
-        AdminView = AdminView,
+        AdminView ,
         
         /// <summary>
         /// Enum SearchView for value: SearchView
         /// </summary>
         
-        SearchView = SearchView,
+        SearchView ,
         
         /// <summary>
         /// Enum Secured for value: Secured
         /// </summary>
         
-        Secured = Secured,
+        Secured ,
         
         /// <summary>
         /// Enum AssignmentLabel for value: AssignmentLabel
         /// </summary>
         
-        AssignmentLabel = AssignmentLabel,
+        AssignmentLabel,
         
         /// <summary>
         /// Enum AssignmentByBatchFolder for value: AssignmentByBatchFolder
         /// </summary>
         
-        AssignmentByBatchFolder = AssignmentByBatchFolder,
+        AssignmentByBatchFolder ,
         
         /// <summary>
         /// Enum AssignmentByReviewer for value: AssignmentByReviewer
         /// </summary>
         
-        AssignmentByReviewer = AssignmentByReviewer,
+        AssignmentByReviewer ,
         
         /// <summary>
         /// Enum WorkByUser for value: WorkByUser
         /// </summary>
         
-        WorkByUser = WorkByUser,
+        WorkByUser ,
         
         /// <summary>
         /// Enum WorkFolderAll for value: WorkFolderAll
         /// </summary>
         
-        WorkFolderAll = WorkFolderAll,
+        WorkFolderAll ,
         
         /// <summary>
         /// Enum TranscriptByUser for value: TranscriptByUser
         /// </summary>
         
-        TranscriptByUser = TranscriptByUser,
+        TranscriptByUser ,
         
         /// <summary>
         /// Enum TranscriptAll for value: TranscriptAll
         /// </summary>
         
-        TranscriptAll = TranscriptAll,
+        TranscriptAll,
         
         /// <summary>
         /// Enum RedactionByUser for value: RedactionByUser
         /// </summary>
         
-        RedactionByUser = RedactionByUser,
+        RedactionByUser ,
         
         /// <summary>
         /// Enum RedactionAll for value: RedactionAll
         /// </summary>
         
-        RedactionAll = RedactionAll,
+        RedactionAll ,
         
         /// <summary>
         /// Enum SavedSearchByUser for value: SavedSearchByUser
         /// </summary>
         
-        SavedSearchByUser = SavedSearchByUser,
+        SavedSearchByUser ,
         
         /// <summary>
         /// Enum SavedSearchAll for value: SavedSearchAll
         /// </summary>
         
-        SavedSearchAll = SavedSearchAll,
+        SavedSearchAll ,
         
         /// <summary>
         /// Enum Filter for value: Filter
         /// </summary>
         
-        Filter = Filter,
+        Filter ,
         
         /// <summary>
         /// Enum AnnotationFilter for value: AnnotationFilter
         /// </summary>
         
-        AnnotationFilter = AnnotationFilter,
+        AnnotationFilter ,
         
         /// <summary>
         /// Enum TagFilter for value: TagFilter
         /// </summary>
         
-        TagFilter = TagFilter,
+        TagFilter ,
         
         /// <summary>
         /// Enum PrivilegedTagFilter for value: PrivilegedTagFilter
         /// </summary>
         
-        PrivilegedTagFilter = PrivilegedTagFilter,
+        PrivilegedTagFilter ,
         
         /// <summary>
         /// Enum DocumentStatusFilter for value: DocumentStatusFilter
         /// </summary>
         
-        DocumentStatusFilter = DocumentStatusFilter,
+        DocumentStatusFilter ,
         
         /// <summary>
         /// Enum OriginalFilter for value: OriginalFilter
         /// </summary>
         
-        OriginalFilter = OriginalFilter,
+        OriginalFilter ,
         
         /// <summary>
         /// Enum DeduplicationFilter for value: DeduplicationFilter
         /// </summary>
         
-        DeduplicationFilter = DeduplicationFilter,
+        DeduplicationFilter ,
         
         /// <summary>
         /// Enum CustodianFilter for value: CustodianFilter
         /// </summary>
         
-        CustodianFilter = CustodianFilter,
+        CustodianFilter ,
         
         /// <summary>
         /// Enum FormatFilter for value: FormatFilter
         /// </summary>
         
-        FormatFilter = FormatFilter,
+        FormatFilter,
         
         /// <summary>
         /// Enum ReviewStatusFilter for value: ReviewStatusFilter
         /// </summary>
         
-        ReviewStatusFilter = ReviewStatusFilter,
+        ReviewStatusFilter ,
         
         /// <summary>
         /// Enum PeopleFilter for value: PeopleFilter
         /// </summary>
         
-        PeopleFilter = PeopleFilter,
+        PeopleFilter ,
         
         /// <summary>
         /// Enum EntitiesFilter for value: EntitiesFilter
         /// </summary>
         
-        EntitiesFilter = EntitiesFilter,
+        EntitiesFilter ,
         
         /// <summary>
         /// Enum SentimentFilter for value: SentimentFilter
         /// </summary>
         
-        SentimentFilter = SentimentFilter
+        SentimentFilter 
     }
 
 }

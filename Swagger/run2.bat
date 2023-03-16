@@ -1,0 +1,1 @@
+java -jar swagger-codegen-cli-2.3.1.jar generate -l csharp -i https://consulting.us-east-1.reveal11.cloud/rest/swagger/docs/v2 -o RevealAPISDK

@@ -35,37 +35,37 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Enum None for value: None
         /// </summary>
         
-        None = None,
+        None ,
         
         /// <summary>
         /// Enum Replace for value: Replace
         /// </summary>
         
-        Replace = Replace,
+        Replace,
         
         /// <summary>
         /// Enum Append for value: Append
         /// </summary>
         
-        Append = Append,
+        Append ,
         
         /// <summary>
         /// Enum Prepend for value: Prepend
         /// </summary>
         
-        Prepend = Prepend,
+        Prepend ,
         
         /// <summary>
         /// Enum Delete for value: Delete
         /// </summary>
         
-        Delete = Delete,
+        Delete ,
         
         /// <summary>
         /// Enum KeepExisting for value: KeepExisting
         /// </summary>
         
-        KeepExisting = KeepExisting
+        KeepExisting 
     }
 
 }

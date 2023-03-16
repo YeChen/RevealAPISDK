@@ -117,5 +117,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Swagger\SDK\src\RevealAPI.Sdk\RevealAPI.Sdk.csproj">
+      <Project>{454af4b3-79a8-4105-a2de-7b20125ae610}</Project>
+      <Name>RevealAPI.Sdk</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
