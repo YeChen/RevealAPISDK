@@ -35,6 +35,8 @@ namespace TestHarness2
             this.label2 = new System.Windows.Forms.Label();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.txtPwd = new System.Windows.Forms.TextBox();
+            this.txtProjects = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btTest
@@ -89,11 +91,30 @@ namespace TestHarness2
             this.txtPwd.Size = new System.Drawing.Size(283, 26);
             this.txtPwd.TabIndex = 5;
             // 
+            // txtProjects
+            // 
+            this.txtProjects.Location = new System.Drawing.Point(62, 460);
+            this.txtProjects.Multiline = true;
+            this.txtProjects.Name = "txtProjects";
+            this.txtProjects.Size = new System.Drawing.Size(597, 310);
+            this.txtProjects.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(74, 413);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(99, 30);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Projects";
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 428);
+            this.ClientSize = new System.Drawing.Size(729, 818);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtProjects);
             this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label2);
@@ -116,6 +137,8 @@ namespace TestHarness2
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.TextBox txtPwd;
+        private System.Windows.Forms.TextBox txtProjects;
+        private System.Windows.Forms.Label label3;
     }
 }
 

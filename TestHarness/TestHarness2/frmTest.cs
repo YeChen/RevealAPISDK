@@ -15,6 +15,7 @@ using System.Net;
 using Newtonsoft.Json;
 using System.Net.Http.Headers;
 
+using RevealAPI.Sdk.Models.Resources;
 
 namespace TestHarness2
 {
@@ -119,6 +120,11 @@ namespace TestHarness2
                 response = await client2.GetAsync(url);
                 result = await response.Content.ReadAsStringAsync();
                 Console.WriteLine(result);
+
+                var projectResponse = JsonConvert.DeserializeObject<PaginatedOfIEnumerableOfProject>(result.ToString());
+                foreach(RevealAPI.Sdk.Models.Resources.Project p in projectResponse.Results){
+                    this.txtProjects.Text += "Project name: " + p.ProjectName + "\r\n";
+                }
 
             }
             catch (Exception ex)
