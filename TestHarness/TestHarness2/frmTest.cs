@@ -126,6 +126,31 @@ namespace TestHarness2
                     this.txtProjects.Text += "Project name: " + p.ProjectName + "\r\n";
                 }
 
+                //read search job 8 results 
+                RevealAPI.Sdk.Models.Resources.DocumentCriteria doccriteria = new DocumentCriteria();
+                doccriteria.FieldProfileId = 8;
+                doccriteria.Start = 0;
+                doccriteria.Count = 25;
+
+                RevealAPI.Sdk.Models.Resources.SearchCriteria criteria = new SearchCriteria();
+                criteria.CaseId = 170;
+                criteria.QueryType = SearchQueryType.SearchJobId;
+
+                criteria.DocumentCriteria = doccriteria;
+
+                var json3 = JsonConvert.SerializeObject(criteria);
+                var data3 = new StringContent(json, Encoding.UTF8, "application/json");
+                url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/170/search";
+                var client3 = new HttpClient();              
+                addDefaultHeader(client3, false);
+                client2.DefaultRequestHeaders.Add("incontrolauthtoken", loginresponse.loginSessionId);
+
+                var response3 = await client3.PostAsync(url, data3);
+                var result3 = await response3.Content.ReadAsStringAsync();
+                Console.WriteLine(result3);              
+                var docresponse = JsonConvert.DeserializeObject<SearchResults>(result3.ToString());
+                Console.WriteLine(result3);
+
             }
             catch (Exception ex)
             {
