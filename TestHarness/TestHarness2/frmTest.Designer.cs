@@ -39,6 +39,7 @@ namespace TestHarness2
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtURL = new System.Windows.Forms.TextBox();
+            this.txtinput = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btTest
@@ -115,7 +116,7 @@ namespace TestHarness2
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(64, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 30);
+            this.label4.Size = new System.Drawing.Size(72, 20);
             this.label4.TabIndex = 8;
             this.label4.Text = "API URL";
             // 
@@ -129,11 +130,20 @@ namespace TestHarness2
             this.txtURL.TabIndex = 9;
             this.txtURL.Text = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/login";
             // 
+            // txtinput
+            // 
+            this.txtinput.Location = new System.Drawing.Point(840, 49);
+            this.txtinput.Multiline = true;
+            this.txtinput.Name = "txtinput";
+            this.txtinput.Size = new System.Drawing.Size(749, 667);
+            this.txtinput.TabIndex = 10;
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 764);
+            this.ClientSize = new System.Drawing.Size(1782, 840);
+            this.Controls.Add(this.txtinput);
             this.Controls.Add(this.txtURL);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -164,6 +174,7 @@ namespace TestHarness2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtURL;
+        private System.Windows.Forms.TextBox txtinput;
     }
 }
 

@@ -126,25 +126,79 @@ namespace TestHarness2
                     this.txtProjects.Text += "Project name: " + p.ProjectName + "\r\n";
                 }
 
+                //-------------------------------------------------------------------------------------------
+                //-------------------------------------------------------------------------------------------
                 //read search job 8 results 
                 RevealAPI.Sdk.Models.Resources.DocumentCriteria doccriteria = new DocumentCriteria();
-                doccriteria.FieldProfileId = 8;
+                doccriteria.FieldNames = new List<string>();
+                doccriteria.FieldNames.Add("BEGDOC");
+                doccriteria.FieldProfileId = 1;
                 doccriteria.Start = 0;
                 doccriteria.Count = 25;
+                doccriteria.GetFields = true;
+                doccriteria.GetMandatoryFields = true;
+                //doccriteria.GetSpecialIconFields = true;
 
                 RevealAPI.Sdk.Models.Resources.SearchCriteria criteria = new SearchCriteria();
-                criteria.CaseId = 170;
-                criteria.QueryType = SearchQueryType.SearchJobId;
+                criteria.CaseId = 0;
+                criteria.UserId = 0;
+                //criteria.QueryType = SearchQueryType.SearchJobId;
+                criteria.QueryType = "SearchJobId";
+                criteria.QueryString = "10";
+                criteria.GetDocumentBodyTerms = true;
+                criteria.IgnoreDocumentSecurity = true;
+                criteria.SearchProfileIds = new List<int?>();
+                criteria.SearchProfileIds.Add(0);
+                criteria.SortByString = "BEGDOC asc";
 
                 criteria.DocumentCriteria = doccriteria;
+                //criteria.AggregationCriteria = new List<AggregationCriteria>();
+                //criteria.DocumentFieldFillRateCriteria = new List<DocumentFieldsFillRateCriteria>();
+                //criteria.DateHistogramCriteria = new List<DateHistogramCriteria>();
+                //criteria.NumberHistogramCriteria = new List<NumberHistogramCriteria>();
 
                 var json3 = JsonConvert.SerializeObject(criteria);
-                var data3 = new StringContent(json, Encoding.UTF8, "application/json");
-                url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/170/search";
-                var client3 = new HttpClient();              
-                addDefaultHeader(client3, false);
-                client2.DefaultRequestHeaders.Add("incontrolauthtoken", loginresponse.loginSessionId);
+                //var json3 = txtinput.Text; 
 
+                var data3 = new StringContent(json3, Encoding.UTF8, "application/json-patch+json");
+                data3.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                //data3.Headers.ContentLength = 600; 
+
+                url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/170/search";
+                var client3 = new HttpClient();
+                //addDefaultHeader(client3, true);
+                client3.DefaultRequestHeaders.Add("method", "POST");
+                client3.DefaultRequestHeaders.Add("authority", "consulting.us-east-1.reveal11.cloud");
+                client3.DefaultRequestHeaders.Add("path", "/rest/api/v2/170/search");
+                client3.DefaultRequestHeaders.Add("scheme", "https");
+                client3.DefaultRequestHeaders.Add("accept", "application/json");
+                client3.DefaultRequestHeaders.Add("accept-encoding", "gzip, deflate, br");
+                client3.DefaultRequestHeaders.Add("accept-language", "en-AU,en;q=0.9");
+                //client.DefaultRequestHeaders.Add("content-length", "600");
+                //client.DefaultRequestHeaders.Add("content-type", "application/json-patch+json");
+                
+                client3.DefaultRequestHeaders.Add("origin", "https://consulting.us-east-1.reveal11.cloud");
+                client3.DefaultRequestHeaders.Add("referer", "https://consulting.us-east-1.reveal11.cloud/rest/api-docs/index.html");
+                client3.DefaultRequestHeaders.Add("sec-ch-ua", "\"Google Chrome\";v=\"111\", \"Not(A: Brand\";v=\"8\", \"Chromium\";v=\"111\"");
+                client3.DefaultRequestHeaders.Add("sec-ch-ua-mobile", "?0");
+                client3.DefaultRequestHeaders.Add("sec-ch-ua-platform", "\"Windows\"");
+                client3.DefaultRequestHeaders.Add("sec-fetch-dest", "empty");
+                client3.DefaultRequestHeaders.Add("sec-fetch-mode", "cors");
+                client3.DefaultRequestHeaders.Add("sec-fetch-site", "same-origin");
+                client3.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36");
+
+                ////cookie
+                //HttpClientHandler handler = new HttpClientHandler();
+                //handler.CookieContainer = new CookieContainer();
+
+                //handler.CookieContainer.Add(uri, new Cookie("name", "value")); // Adding a Cookie
+                //HttpClient client = new HttpClient(handler);
+                //HttpResponseMessage response = await client.GetAsync(uri);
+                //CookieCollection collection = handler.CookieContainer.GetCookies(uri); // Retrieving a Cookie
+
+                client3.DefaultRequestHeaders.Add("incontrolauthtoken", loginresponse.loginSessionId);
+                client3.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                
                 var response3 = await client3.PostAsync(url, data3);
                 var result3 = await response3.Content.ReadAsStringAsync();
                 Console.WriteLine(result3);              

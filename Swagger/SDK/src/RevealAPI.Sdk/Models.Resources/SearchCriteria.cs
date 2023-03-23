@@ -34,7 +34,9 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Gets or Sets QueryType
         /// </summary>
         [DataMember(Name="queryType", EmitDefaultValue=false)]
-        public SearchQueryType? QueryType { get; set; }
+        //public SearchQueryType? QueryType { get; set; }
+        public string QueryType { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchCriteria" /> class.
         /// </summary>
@@ -62,7 +64,7 @@ namespace RevealAPI.Sdk.Models.Resources
             this.UserId = userId;
             this.CaseId = caseId;
             this.QueryString = queryString;
-            this.QueryType = queryType;
+            //this.QueryType = queryType;
             this.SortByString = sortByString;
             this.IgnoreDocumentSecurity = ignoreDocumentSecurity;
             this.SearchProfileIds = searchProfileIds;
