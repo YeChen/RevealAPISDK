@@ -21,6 +21,9 @@ namespace TestHarness2
 {
     public partial class frmTest : Form
     {
+
+        private string _token = ""; 
+
         public frmTest()
         {
             InitializeComponent();
@@ -80,27 +83,8 @@ namespace TestHarness2
 
                 var json = JsonConvert.SerializeObject(loginrequest);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
-
-                //client.DefaultRequestHeaders.Add("authority", "consulting.us-east-1.reveal11.cloud");
-                //client.DefaultRequestHeaders.Add("method", "POST");
-                //client.DefaultRequestHeaders.Add("path", "/rest/api/v2/login");
-                //client.DefaultRequestHeaders.Add("scheme", "https");
-                //client.DefaultRequestHeaders.Add("accept", "application/json");
-                //client.DefaultRequestHeaders.Add("accept-encoding", "gzip, deflate, br");
-                //client.DefaultRequestHeaders.Add("accept-language", "en-AU,en;q=0.9");
-                ////client.DefaultRequestHeaders.Add("content-length", "60");
-                ////client.DefaultRequestHeaders.Add("content-type", "application/json-patch+json");
-                //client.DefaultRequestHeaders.Add("origin", "https://consulting.us-east-1.reveal11.cloud");
-                //client.DefaultRequestHeaders.Add("referer", "https://consulting.us-east-1.reveal11.cloud/rest/api-docs/index.html?urls.primaryName=v2");
-                //client.DefaultRequestHeaders.Add("sec-ch-ua", "\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"");
-                //client.DefaultRequestHeaders.Add("sec-ch-ua-mobile", "?0");
-                //client.DefaultRequestHeaders.Add("sec-ch-ua-platform", "\"Windows\"");
-                //client.DefaultRequestHeaders.Add("sec-fetch-dest", "empty");
-                //client.DefaultRequestHeaders.Add("sec-fetch-mode", "cors");
-                //client.DefaultRequestHeaders.Add("sec-fetch-site", "same-origin");
-                //client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36");
-
-                addDefaultHeader(client, true);
+             
+                addDefaultHeader(client, true, "");
 
                 var response = await client.PostAsync(url, data);
 
@@ -110,12 +94,17 @@ namespace TestHarness2
                 //get login id 
                 var loginresponse = JsonConvert.DeserializeObject<LoginResponse>(result.ToString());
 
+                _token = loginresponse.loginSessionId;
+
+                MessageBox.Show("Login Successful"); 
+
+                /*
                 Console.WriteLine(result);
 
                 //get a list of projects
                 var client2 = new HttpClient();
                 url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/projects?userId=0&filterByExact=true&start=0&count=2147483647";
-                addDefaultHeader(client2, false);                
+                addDefaultHeader(client2, false, "");                
                 client2.DefaultRequestHeaders.Add("incontrolauthtoken", loginresponse.loginSessionId);
                 response = await client2.GetAsync(url);
                 result = await response.Content.ReadAsStringAsync();
@@ -205,6 +194,8 @@ namespace TestHarness2
                 var docresponse = JsonConvert.DeserializeObject<SearchResults>(result3.ToString());
                 Console.WriteLine(result3);
 
+                */
+
             }
             catch (Exception ex)
             {
@@ -212,7 +203,33 @@ namespace TestHarness2
             }
         }
 
-        private void addDefaultHeader(HttpClient client, bool isPostRequest)
+        private async void btListProjects_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var client = new HttpClient();
+                var url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/projects?userId=0&filterByExact=true&start=0&count=2147483647";
+                addDefaultHeader(client, false, "");
+                client.DefaultRequestHeaders.Add("incontrolauthtoken", _token);
+               
+                Task<string> result = runHTTPClient(client, false, url, null);
+                string resultstr = await result; 
+
+                var projectResponse = JsonConvert.DeserializeObject<PaginatedOfIEnumerableOfProject>(resultstr);
+                foreach (RevealAPI.Sdk.Models.Resources.Project p in projectResponse.Results)
+                {
+                    this.txtProjects.Text += "Project name: " + p.ProjectName + "\r\n";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void addDefaultHeader(HttpClient client, bool isPostRequest, string path)
         {
             if (isPostRequest)
             {
@@ -223,8 +240,9 @@ namespace TestHarness2
                 client.DefaultRequestHeaders.Add("method", "GET");
             }
 
-            client.DefaultRequestHeaders.Add("authority", "consulting.us-east-1.reveal11.cloud");        
-            client.DefaultRequestHeaders.Add("path", "/rest/api/v2/login");
+            client.DefaultRequestHeaders.Add("authority", "consulting.us-east-1.reveal11.cloud");
+            //client.DefaultRequestHeaders.Add("path", "/rest/api/v2/login");
+            client.DefaultRequestHeaders.Add("path", path);
             client.DefaultRequestHeaders.Add("scheme", "https");
             client.DefaultRequestHeaders.Add("accept", "application/json");
             client.DefaultRequestHeaders.Add("accept-encoding", "gzip, deflate, br");
@@ -241,7 +259,81 @@ namespace TestHarness2
             client.DefaultRequestHeaders.Add("sec-fetch-site", "same-origin");
             client.DefaultRequestHeaders.Add("user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36");
 
+        }
+        private async Task<string> runHTTPClient(HttpClient client, bool isPostRequest, string url, object payload)
+        {
+            string resultstr = "";
+            if (isPostRequest)
+            {
+                var json = JsonConvert.SerializeObject(payload);
+                var data = new StringContent(json, Encoding.UTF8, "application/json-patch+json");
+                data.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                var response = await client.PostAsync(url, data);
+                //var result = await response.Content.ReadAsStringAsync();
+                //resultstr = result.ToString();
+                resultstr = await response.Content.ReadAsStringAsync();
+            }
+            else
+            {
+                var response = await client.GetAsync(url);
+                //var result = await response.Content.ReadAsStringAsync();
+                //resultstr = result.ToString();
+                resultstr = await response.Content.ReadAsStringAsync();
+            }
+            return resultstr; 
+        }
 
+        private async void btRunSearch_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RevealAPI.Sdk.Models.Resources.DocumentCriteria doccriteria = new DocumentCriteria();
+                doccriteria.FieldNames = new List<string>();
+                doccriteria.FieldNames.Add("BEGDOC");
+                doccriteria.FieldProfileId = 1;
+                doccriteria.Start = 0;
+                doccriteria.Count = 25;
+                doccriteria.GetFields = true;
+                doccriteria.GetMandatoryFields = true;
+                //doccriteria.GetSpecialIconFields = true;
+
+                RevealAPI.Sdk.Models.Resources.SearchCriteria criteria = new SearchCriteria();
+                criteria.CaseId = 0;
+                criteria.UserId = 0;
+                //criteria.QueryType = SearchQueryType.SearchJobId;
+                criteria.QueryType = "SearchJobId";
+                criteria.QueryString = "10";
+                criteria.GetDocumentBodyTerms = true;
+                criteria.IgnoreDocumentSecurity = true;
+                criteria.SearchProfileIds = new List<int?>();
+                criteria.SearchProfileIds.Add(0);
+                criteria.SortByString = "BEGDOC asc";
+
+                criteria.DocumentCriteria = doccriteria;
+                //criteria.AggregationCriteria = new List<AggregationCriteria>();
+                //criteria.DocumentFieldFillRateCriteria = new List<DocumentFieldsFillRateCriteria>();
+                //criteria.DateHistogramCriteria = new List<DateHistogramCriteria>();
+                //criteria.NumberHistogramCriteria = new List<NumberHistogramCriteria>();
+
+                string url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/170/search";
+                var client = new HttpClient();
+                addDefaultHeader(client, true, "/rest/api/v2/170/search");
+                client.DefaultRequestHeaders.Add("incontrolauthtoken", _token);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Task<string> result = runHTTPClient(client, true, url, criteria);
+                string resultstr = await result;
+               
+                var docresponse = JsonConvert.DeserializeObject<SearchResults>(resultstr);
+
+                foreach (RevealAPI.Sdk.Models.Resources.Document d in docresponse.DocumentResults.Documents)
+                {
+                    this.txtProjects.Text += "DocID: " +  d.Id + "\r\n";
+                }
+            }
+            catch (Exception ex) {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
