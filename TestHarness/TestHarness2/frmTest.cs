@@ -335,5 +335,49 @@ namespace TestHarness2
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private async void btReadText_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                RevealAPI.V1.Models.Resources.DocumentsRequest docrequest = new RevealAPI.V1.Models.Resources.DocumentsRequest();
+                docrequest.DocumentFields = new List<string>();
+                docrequest.DocumentFields.Add("Body Text");
+                docrequest.DocumentIds = new List<string>();
+                docrequest.DocumentIds.Add("78");
+                docrequest.DocumentIds.Add("73");
+                docrequest.FieldProfileName = "Default";
+
+                docrequest.CombineDateTimeFields = true;
+                docrequest.KeyField = "ItemID";
+                docrequest.UseFieldNames = false;
+                docrequest.MaxTextLength = 0;
+
+                string url = "https://consulting.us-east-1.reveal11.cloud/rest/api/document?caseId=170&userId=23";
+                var client = new HttpClient();
+                addDefaultHeader(client, true, "/rest/api/document?caseId=170&userId=23");
+                client.DefaultRequestHeaders.Add("incontrolauthtoken", _token);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Task<string> result = runHTTPClient(client, true, url, docrequest);
+                string resultstr = await result;
+
+                var docresponse = JsonConvert.DeserializeObject<List<RevealAPI.V1.Models.Resources.Document>>(resultstr);
+
+                foreach (RevealAPI.V1.Models.Resources.Document d in docresponse)
+                {
+
+                    foreach (RevealAPI.V1.Models.Resources.DocumentField f in d.Fields)
+                    {
+                        this.txtProjects.Text += "Field: " + f.FieldName + "\r\n" + "Value: " + f.FieldValue + "\r\n";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
     }
 }

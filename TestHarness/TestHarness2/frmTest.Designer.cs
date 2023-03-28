@@ -45,6 +45,9 @@ namespace TestHarness2
             this.txtCaseID = new System.Windows.Forms.TextBox();
             this.txtSearchID = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btReadText = new System.Windows.Forms.Button();
+            this.txtDocId = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btTest
@@ -105,7 +108,7 @@ namespace TestHarness2
             this.txtProjects.Multiline = true;
             this.txtProjects.Name = "txtProjects";
             this.txtProjects.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtProjects.Size = new System.Drawing.Size(485, 511);
+            this.txtProjects.Size = new System.Drawing.Size(810, 767);
             this.txtProjects.TabIndex = 6;
             // 
             // label3
@@ -190,11 +193,41 @@ namespace TestHarness2
             this.label6.TabIndex = 15;
             this.label6.Text = "Search ID";
             // 
+            // btReadText
+            // 
+            this.btReadText.Location = new System.Drawing.Point(164, 631);
+            this.btReadText.Name = "btReadText";
+            this.btReadText.Size = new System.Drawing.Size(238, 71);
+            this.btReadText.TabIndex = 17;
+            this.btReadText.Text = "Read Text";
+            this.btReadText.UseVisualStyleBackColor = true;
+            this.btReadText.Click += new System.EventHandler(this.btReadText_Click);
+            // 
+            // txtDocId
+            // 
+            this.txtDocId.Location = new System.Drawing.Point(508, 676);
+            this.txtDocId.Name = "txtDocId";
+            this.txtDocId.Size = new System.Drawing.Size(104, 26);
+            this.txtDocId.TabIndex = 19;
+            this.txtDocId.Text = "78, 73";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(428, 679);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 20);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "DocId";
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 656);
+            this.ClientSize = new System.Drawing.Size(1582, 863);
+            this.Controls.Add(this.txtDocId);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.btReadText);
             this.Controls.Add(this.txtSearchID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtCaseID);
@@ -237,6 +270,9 @@ namespace TestHarness2
         private System.Windows.Forms.TextBox txtCaseID;
         private System.Windows.Forms.TextBox txtSearchID;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btReadText;
+        private System.Windows.Forms.TextBox txtDocId;
+        private System.Windows.Forms.Label label7;
     }
 }
 

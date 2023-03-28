@@ -118,6 +118,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Swagger\SDKV1\src\RevealAPI.V1\RevealAPI.V1.csproj">
+      <Project>{2697cdcc-d009-45a8-9913-178912ef471b}</Project>
+      <Name>RevealAPI.V1</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Swagger\SDK\src\RevealAPI.Sdk\RevealAPI.Sdk.csproj">
       <Project>{454af4b3-79a8-4105-a2de-7b20125ae610}</Project>
       <Name>RevealAPI.Sdk</Name>
