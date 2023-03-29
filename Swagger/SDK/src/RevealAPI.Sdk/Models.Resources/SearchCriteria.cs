@@ -34,8 +34,8 @@ namespace RevealAPI.Sdk.Models.Resources
         /// Gets or Sets QueryType
         /// </summary>
         [DataMember(Name="queryType", EmitDefaultValue=false)]
-        //public SearchQueryType? QueryType { get; set; }
-        public string QueryType { get; set; }
+        public SearchQueryType? QueryType { get; set; }
+        //public string QueryType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchCriteria" /> class.

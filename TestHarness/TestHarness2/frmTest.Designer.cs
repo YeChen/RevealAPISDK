@@ -48,6 +48,12 @@ namespace TestHarness2
             this.btReadText = new System.Windows.Forms.Button();
             this.txtDocId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btCreateField = new System.Windows.Forms.Button();
+            this.btUpdateText = new System.Windows.Forms.Button();
+            this.txtFieldName = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtFieldValue = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btTest
@@ -108,7 +114,7 @@ namespace TestHarness2
             this.txtProjects.Multiline = true;
             this.txtProjects.Name = "txtProjects";
             this.txtProjects.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtProjects.Size = new System.Drawing.Size(810, 767);
+            this.txtProjects.Size = new System.Drawing.Size(786, 919);
             this.txtProjects.TabIndex = 6;
             // 
             // label3
@@ -199,7 +205,7 @@ namespace TestHarness2
             this.btReadText.Name = "btReadText";
             this.btReadText.Size = new System.Drawing.Size(238, 71);
             this.btReadText.TabIndex = 17;
-            this.btReadText.Text = "Read Text";
+            this.btReadText.Text = "Read Text (V1)";
             this.btReadText.UseVisualStyleBackColor = true;
             this.btReadText.Click += new System.EventHandler(this.btReadText_Click);
             // 
@@ -220,11 +226,71 @@ namespace TestHarness2
             this.label7.TabIndex = 18;
             this.label7.Text = "DocId";
             // 
+            // btCreateField
+            // 
+            this.btCreateField.Location = new System.Drawing.Point(164, 743);
+            this.btCreateField.Name = "btCreateField";
+            this.btCreateField.Size = new System.Drawing.Size(238, 71);
+            this.btCreateField.TabIndex = 20;
+            this.btCreateField.Text = "Create field";
+            this.btCreateField.UseVisualStyleBackColor = true;
+            this.btCreateField.Click += new System.EventHandler(this.btCreateField_Click);
+            // 
+            // btUpdateText
+            // 
+            this.btUpdateText.Location = new System.Drawing.Point(161, 903);
+            this.btUpdateText.Name = "btUpdateText";
+            this.btUpdateText.Size = new System.Drawing.Size(238, 71);
+            this.btUpdateText.TabIndex = 21;
+            this.btUpdateText.Text = "Update Text";
+            this.btUpdateText.UseVisualStyleBackColor = true;
+            // 
+            // txtFieldName
+            // 
+            this.txtFieldName.Location = new System.Drawing.Point(455, 788);
+            this.txtFieldName.Name = "txtFieldName";
+            this.txtFieldName.Size = new System.Drawing.Size(157, 26);
+            this.txtFieldName.TabIndex = 23;
+            this.txtFieldName.Text = "TranslatedABC";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(428, 755);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 20);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "fieldname";
+            // 
+            // txtFieldValue
+            // 
+            this.txtFieldValue.Location = new System.Drawing.Point(432, 903);
+            this.txtFieldValue.Multiline = true;
+            this.txtFieldValue.Name = "txtFieldValue";
+            this.txtFieldValue.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtFieldValue.Size = new System.Drawing.Size(287, 80);
+            this.txtFieldValue.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(431, 870);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(75, 30);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Value";
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1582, 863);
+            this.ClientSize = new System.Drawing.Size(1588, 1043);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txtFieldValue);
+            this.Controls.Add(this.txtFieldName);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btUpdateText);
+            this.Controls.Add(this.btCreateField);
             this.Controls.Add(this.txtDocId);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btReadText);
@@ -273,6 +339,12 @@ namespace TestHarness2
         private System.Windows.Forms.Button btReadText;
         private System.Windows.Forms.TextBox txtDocId;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btCreateField;
+        private System.Windows.Forms.Button btUpdateText;
+        private System.Windows.Forms.TextBox txtFieldName;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtFieldValue;
+        private System.Windows.Forms.Label label9;
     }
 }
 

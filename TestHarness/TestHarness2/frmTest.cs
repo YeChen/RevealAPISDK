@@ -300,8 +300,8 @@ namespace TestHarness2
                 RevealAPI.Sdk.Models.Resources.SearchCriteria criteria = new SearchCriteria();
                 criteria.CaseId = 0;
                 criteria.UserId = 0;
-                //criteria.QueryType = SearchQueryType.SearchJobId;
-                criteria.QueryType = "SearchJobId";
+                criteria.QueryType = SearchQueryType.SearchJobId;
+                //criteria.QueryType = "SearchJobId";
                 criteria.QueryString = "10";
                 criteria.GetDocumentBodyTerms = true;
                 criteria.IgnoreDocumentSecurity = true;
@@ -378,6 +378,55 @@ namespace TestHarness2
                 MessageBox.Show(ex.ToString());
             }
 
+        }
+
+        private async void btCreateField_Click(object sender, EventArgs e)
+        {
+            try
+            {                                
+                RevealAPI.Sdk.Models.Resources.Field fieldrequest = new Field();
+                fieldrequest.FieldId = 0;
+                fieldrequest.FieldName = txtFieldName.Text;
+                fieldrequest.DisplayName = txtFieldName.Text;
+                //Valid values are bit, date, datetime, decimal, float, bigint, numeric, nvarchar, time
+                fieldrequest.DataType = "nvarchar";
+                fieldrequest.DataTypeDesc = "API created field";                
+                fieldrequest.MaxLength = 2000;
+                fieldrequest.IsUpdatable = true;
+                fieldrequest.IsSearchable = true;
+                fieldrequest.IsSortable = true;
+                fieldrequest.IsNativeFileField = false;
+                fieldrequest.IsUpdatable = true;
+                fieldrequest.HasExactText = true;
+                fieldrequest.Indexed = true;
+                fieldrequest.Pinned = true;
+                fieldrequest.Stored = true; 
+                fieldrequest.Type = "Text";                 
+
+                string url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/170/fields";
+                var client = new HttpClient();
+                addDefaultHeader(client, true, "/rest/api/v2/170/fields");
+                client.DefaultRequestHeaders.Add("incontrolauthtoken", _token);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Task<string> result = runHTTPClient(client, true, url, fieldrequest);
+                string resultstr = await result;
+
+                var response = JsonConvert.DeserializeObject<RevealAPI.Sdk.Models.Resources.Field>(resultstr);
+                if (response.FieldId > 0)
+                {
+                    MessageBox.Show("Filed " + response.FieldName + " was created successfully. FieldID: " + response.FieldId);
+                }
+                else
+                {
+                    MessageBox.Show("Filed creation failed");
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }
