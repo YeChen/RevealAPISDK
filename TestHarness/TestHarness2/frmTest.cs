@@ -16,6 +16,7 @@ using Newtonsoft.Json;
 using System.Net.Http.Headers;
 
 using RevealAPI.Sdk.Models.Resources;
+using RevealAPI.V1.Models.Resources;
 
 namespace TestHarness2
 {
@@ -427,6 +428,91 @@ namespace TestHarness2
             {
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private async void btUpdateText_Click(object sender, EventArgs e)
+        {
+            //v1, set text set for a document: Document, /api/document/SetDocumentText, 
+            //v2, use bulktag, https://consulting.us-east-1.reveal11.cloud/rest/api/v2/170/jobs/bulkTag
+
+            try
+            {
+                RevealAPI.Sdk.Models.Resources.BulkTagJobCreate job = new BulkTagJobCreate();
+                job.SelectedDocumentItemIds = new List<long?>();
+                job.SelectedDocumentItemIds.Add(73);
+                job.SelectedDocumentItemIds.Add(78);
+                job.DocumentSelectionType = DocumentSelection.Subset;
+                job.UpdateFieldsEntry = new UpdateFieldEntry();
+                job.UpdateFieldsEntry.UpdateOption = BulkFieldUpdateOption.Replace;
+                job.UpdateFieldsEntry.VariableSets = new List<FieldUpdateVariableSet>();
+                FieldUpdateVariableSet updateset = new FieldUpdateVariableSet();
+                updateset.FieldId = 350;
+                updateset.Variables = new List<SlipsheetVariables>();
+                SlipsheetVariables var = new SlipsheetVariables();
+                var.Category = SlipsheetProfileVariableCategory.UserText;
+                var.DisplayOrder = 0;
+                var.Value = txtFieldValue.Text;
+                updateset.Variables.Add(var); 
+
+                string url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/170/jobs/bulkTag";
+                var client = new HttpClient();
+                addDefaultHeader(client, true, "/rest/api/v2/170/jobs/bulkTag");
+                client.DefaultRequestHeaders.Add("incontrolauthtoken", _token);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Task<string> result = runHTTPClient(client, true, url, job);
+                string resultstr = await result;
+
+                var response = JsonConvert.DeserializeObject<RevealAPI.Sdk.Models.Resources.BulkTagJob>(resultstr);
+                if (response.Id > 0)
+                {
+                    MessageBox.Show("Job " + response.Id + " was created successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("bulk tag job creation failed");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private async void btReindex_Click(object sender, EventArgs e)
+        {
+            //v1, /api/Indexing
+            try
+            {
+                RevealAPI.V1.Models.Resources.IndexJobCreate job = new IndexJobCreate();
+               
+                string url = "https://consulting.us-east-1.reveal11.cloud/rest/api/v2/170/jobs/bulkTag";
+                var client = new HttpClient();
+                addDefaultHeader(client, true, "/rest/api/v2/170/jobs/bulkTag");
+                client.DefaultRequestHeaders.Add("incontrolauthtoken", _token);
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Task<string> result = runHTTPClient(client, true, url, job);
+                string resultstr = await result;
+
+                var response = JsonConvert.DeserializeObject<RevealAPI.Sdk.Models.Resources.BulkTagJob>(resultstr);
+                if (response.Id > 0)
+                {
+                    MessageBox.Show("Job " + response.Id + " was created successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("bulk tag job creation failed");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
         }
     }
 }

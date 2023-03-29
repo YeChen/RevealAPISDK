@@ -49,11 +49,12 @@ namespace TestHarness2
             this.txtDocId = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btCreateField = new System.Windows.Forms.Button();
-            this.btUpdateText = new System.Windows.Forms.Button();
+            this.btUpdateField = new System.Windows.Forms.Button();
             this.txtFieldName = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtFieldValue = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btReindex = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btTest
@@ -114,7 +115,7 @@ namespace TestHarness2
             this.txtProjects.Multiline = true;
             this.txtProjects.Name = "txtProjects";
             this.txtProjects.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.txtProjects.Size = new System.Drawing.Size(786, 919);
+            this.txtProjects.Size = new System.Drawing.Size(778, 1023);
             this.txtProjects.TabIndex = 6;
             // 
             // label3
@@ -236,14 +237,15 @@ namespace TestHarness2
             this.btCreateField.UseVisualStyleBackColor = true;
             this.btCreateField.Click += new System.EventHandler(this.btCreateField_Click);
             // 
-            // btUpdateText
+            // btUpdateField
             // 
-            this.btUpdateText.Location = new System.Drawing.Point(161, 903);
-            this.btUpdateText.Name = "btUpdateText";
-            this.btUpdateText.Size = new System.Drawing.Size(238, 71);
-            this.btUpdateText.TabIndex = 21;
-            this.btUpdateText.Text = "Update Text";
-            this.btUpdateText.UseVisualStyleBackColor = true;
+            this.btUpdateField.Location = new System.Drawing.Point(161, 903);
+            this.btUpdateField.Name = "btUpdateField";
+            this.btUpdateField.Size = new System.Drawing.Size(238, 71);
+            this.btUpdateField.TabIndex = 21;
+            this.btUpdateField.Text = "Update Above Field";
+            this.btUpdateField.UseVisualStyleBackColor = true;
+            this.btUpdateField.Click += new System.EventHandler(this.btUpdateText_Click);
             // 
             // txtFieldName
             // 
@@ -270,6 +272,7 @@ namespace TestHarness2
             this.txtFieldValue.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtFieldValue.Size = new System.Drawing.Size(287, 80);
             this.txtFieldValue.TabIndex = 24;
+            this.txtFieldValue.Text = "hello world!";
             // 
             // label9
             // 
@@ -280,16 +283,27 @@ namespace TestHarness2
             this.label9.TabIndex = 25;
             this.label9.Text = "Value";
             // 
+            // btReindex
+            // 
+            this.btReindex.Location = new System.Drawing.Point(164, 1022);
+            this.btReindex.Name = "btReindex";
+            this.btReindex.Size = new System.Drawing.Size(238, 71);
+            this.btReindex.TabIndex = 26;
+            this.btReindex.Text = "ReIndex";
+            this.btReindex.UseVisualStyleBackColor = true;
+            this.btReindex.Click += new System.EventHandler(this.btReindex_Click);
+            // 
             // frmTest
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1588, 1043);
+            this.ClientSize = new System.Drawing.Size(1561, 1243);
+            this.Controls.Add(this.btReindex);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtFieldValue);
             this.Controls.Add(this.txtFieldName);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btUpdateText);
+            this.Controls.Add(this.btUpdateField);
             this.Controls.Add(this.btCreateField);
             this.Controls.Add(this.txtDocId);
             this.Controls.Add(this.label7);
@@ -340,11 +354,12 @@ namespace TestHarness2
         private System.Windows.Forms.TextBox txtDocId;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btCreateField;
-        private System.Windows.Forms.Button btUpdateText;
+        private System.Windows.Forms.Button btUpdateField;
         private System.Windows.Forms.TextBox txtFieldName;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtFieldValue;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btReindex;
     }
 }
 
